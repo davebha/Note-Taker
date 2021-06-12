@@ -13,5 +13,12 @@ app.use(
   })
 );
 
+app.get("*", (request, response) => {
+  response.redirect("/index.html");
+});
+app.get("/notes", (request, response) => {
+  response.redirect(`/notes.html`);
+});
+
 // Start the server on the port
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
