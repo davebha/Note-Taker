@@ -1,10 +1,11 @@
+const { request } = require("express");
 const express = require("express");
 
 //setup express
 const app = express();
 const PORT = 8000;
 
-const indexUrl = `${__direname}/public`;
+const indexUrl = `${__dirname}/public`;
 
 app.use(
   express.static(indexUrl, {
