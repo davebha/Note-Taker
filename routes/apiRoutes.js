@@ -8,7 +8,10 @@ router.get("/notes", async (request, response) => {
 });
 
 //ADD NEW NOTES
+router.post("/notes", async (request, response) => {
+  let results = await store.addNote(request.body);
+  response.send(results);
+});
 
 //DELETE NOTE BY ID
-
 module.exports = router;
